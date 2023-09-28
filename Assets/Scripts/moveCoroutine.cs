@@ -24,7 +24,7 @@ public class moveCoroutine : MonoBehaviour
         //StartCoroutine(myCoroutine(target));
         if (test)
         {
-            StartCoroutine(FullMotion(target.position, moveTime, targetRotation, rotateTime));
+            StartCoroutine(FullMotion(target.position, moveTime, targetRotation, rotateTime, 0));
         }
     }
 
@@ -82,8 +82,11 @@ public class moveCoroutine : MonoBehaviour
         transform.position = p;
     }
 
-    public IEnumerator FullMotion(Vector3 targetPos, float moveTime, Quaternion targetRot, float turnTime)
+    public IEnumerator FullMotion(Vector3 targetPos, float moveTime, Quaternion targetRot, float turnTime, float delayTime)
     {
+        originalPos = transform.position;
+        originalRotation = transform.rotation;
+        yield return new WaitForSeconds(delayTime);
         yield return StartCoroutine(Rotater(targetRot, turnTime));
         yield return StartCoroutine(Mover(targetPos, moveTime));
         yield return StartCoroutine(Mover(originalPos, moveTime));

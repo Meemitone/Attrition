@@ -46,11 +46,6 @@ public class UnitHolder : MonoBehaviour
         DEF.text = ((int)stats.Defense).ToString();
         Type.text = (stats.PrimType).ToString();
         HP.value = stats.CurrentHP / stats.MaxHP;
-        if(stats.CurrentHP <= 0)
-        {
-            //RemoveSelf (ideally with animation)
-            Destroy(gameObject);
-        }
     }
 
     internal void targetArrow()
@@ -77,6 +72,15 @@ public class UnitHolder : MonoBehaviour
         else
         {
             return stats.SecType;
+        }
+    }
+
+    internal void CheckDeath()
+    {
+        if (stats.CurrentHP <= 0)
+        {
+            //RemoveSelf (ideally with animation)
+            Destroy(gameObject);
         }
     }
 }
