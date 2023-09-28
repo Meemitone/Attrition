@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static CombatManager;
 using TMPro;
+using static GameDataManager;
 
 public class UnitHolder : MonoBehaviour
 {
@@ -46,6 +46,11 @@ public class UnitHolder : MonoBehaviour
         DEF.text = ((int)stats.Defense).ToString();
         Type.text = (stats.PrimType).ToString();
         HP.value = stats.CurrentHP / stats.MaxHP;
+        if(stats.CurrentHP <= 0)
+        {
+            //RemoveSelf (ideally with animation)
+            Destroy(gameObject);
+        }
     }
 
     internal void targetArrow()
@@ -53,13 +58,13 @@ public class UnitHolder : MonoBehaviour
         if(stats.target == null)
         {
             arrowSprite.transform.localScale = new Vector3(1,arrowSprite.transform.localScale.y);
-            arrowSprite.transform.localPosition = Vector3.zero;
+            arrowSprite.GetComponent<HardToMove>().lockedPos = transform.position; //.transform.localPosition = Vector3.zero;
         }
         else
         {
-            arrowSprite.transform.position = (stats.target.gameObject.transform.position - gameObject.transform.position) / 2 + gameObject.transform.position;
+            arrowSprite.GetComponent<HardToMove>().lockedPos = (stats.target.gameObject.transform.position - gameObject.transform.position) / 2 + gameObject.transform.position;
             arrowSprite.transform.localScale = new Vector3((stats.target.gameObject.transform.position - gameObject.transform.position).magnitude*200/ 4.441839f, arrowSprite.transform.localScale.y);
-            arrowSprite.transform.rotation = Quaternion.FromToRotation(new Vector3(1,0,0), (stats.target.gameObject.transform.position - gameObject.transform.position));
+            arrowSprite.GetComponent<HardToMove>().lockedRot = Quaternion.FromToRotation(transform.right, (stats.target.gameObject.transform.position - gameObject.transform.position));
         }
     }
 

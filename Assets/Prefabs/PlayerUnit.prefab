@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 6442297734532283646}
   - component: {fileID: 6442297734532283647}
   - component: {fileID: 6442297734532283640}
+  - component: {fileID: 696114098039934360}
   m_Layer: 5
   m_Name: PlayerUnit
   m_TagString: Untagged
@@ -305,6 +306,27 @@ MonoBehaviour:
   HP: {fileID: 6442297734650111976}
   UsePrimaryType: 1
   arrowSprite: {fileID: 8690735251673192198}
+--- !u!114 &696114098039934360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442297734532283645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9124f1eee05f07419c459357fb0a84c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  moveTime: 0
+  rotateTime: 0
+  angle: 0
+  pos: {x: 0, y: 0, z: 0}
+  originalPos: {x: 0, y: 0, z: 0}
+  test: 0
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6442297734650111982
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9052917660805771736}
   - component: {fileID: 5513491942020857604}
+  - component: {fileID: 4218646646141831053}
   m_Layer: 5
   m_Name: Triangle
   m_TagString: Untagged
@@ -1055,3 +1078,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4218646646141831053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8690735251673192198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2c73432fc36364b85394e8ac2b7e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
