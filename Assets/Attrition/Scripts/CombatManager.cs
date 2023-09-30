@@ -27,7 +27,8 @@ public class CombatManager : MonoBehaviour
     //Stop attack button spam
     public GameObject attackButton;
     public GameObject retreatButton;
-    private bool isCouroutineRunning; // = false;
+    private bool isCouroutineRunning = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -80,7 +81,7 @@ public class CombatManager : MonoBehaviour
     //This will need to be refactored hard, damage needs to happen in sync with movements
     IEnumerator DamageCleanup()
     {
-        //fix attack button spam*******************************************************************************************
+        //Fix attack button spam
         isCouroutineRunning = true;
 
         yield return new WaitForSeconds(2);
@@ -175,6 +176,16 @@ public class CombatManager : MonoBehaviour
 
     private void UpdateUI()
     {
+        //Fix attack button spam
+        /*
+        attackButton.SetActive(true);
+        retreatButton.SetActive(true);
+        Debug.Log("Buttons ON!!!!!");
+        */
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Debug.Log("Cursor ON!!!!!");
+
         UnitHolder[] held;
         if (pcount != players.transform.childCount)
         {
@@ -277,30 +288,19 @@ public class CombatManager : MonoBehaviour
         yield return null;
     }
 
-    //Fix attack button spam problem
+    //Fix attack button spam problem (cursor will lock and turn off to stop players from spam clicking buttons and breaking game)
     public void disableMoreAtacks()
     {
-        /*
-        if(state == CombatState.SELECTING)
+        if (isCouroutineRunning == true)
         {
-           attackButton.SetActive(true);
-        }
-        else if (state == CombatState.DEFAULT)
-        {
-           attackButton.SetActive(false);
-        }
-        */
-
-        /*
-        if (isCouroutineRunning == false)
-        {
-            attackButton.SetActive(true);
-        }
-        else if (isCouroutineRunning == true)
-        {
+            /*
             attackButton.SetActive(false);
+            retreatButton.SetActive(false);
+            Debug.Log("Buttons OFF!!!!!");
+            */
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Debug.Log("Cursor OFF!!!!!");
         }
-        */
-        
     }
 }
