@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f40a17065ae579642b8e4907d764a152
+guid: 75310aa75b7cf9c438a02560e7f05c45
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -125,11 +125,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AssassinVFXSequence1_0
+      name: PaladinVFXSequence1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b56d04418b4194ead91319397e2ca0
-      internalID: 7745807
+      spriteID: db9c425bcfeaac14fb102623e08f4cdd
+      internalID: -673285368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_1
+      name: PaladinVFXSequence1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10c5ceeb3feaf3642a0d980c9a62ecd6
-      internalID: -1860532387
+      spriteID: 370f25daf65bed649baa2366a9dbdad5
+      internalID: -520898313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_2
+      name: PaladinVFXSequence1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -185,14 +197,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f56971717b2a4be448d14335a2287598
-      internalID: 129997818
+      spriteID: d4d908f2ee241354fb65b38ee1b1a876
+      internalID: -1725492854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_3
+      name: PaladinVFXSequence1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -206,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52777f9bf4484494bac531859c3c95b3
-      internalID: -590879600
+      spriteID: 7caa2db9f641d874a829ef848abd55bc
+      internalID: 2115151038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_4
+      name: PaladinVFXSequence1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -227,14 +239,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c77597cad0eb284ebd5cd7fc8424b52
-      internalID: -39604005
+      spriteID: 364f11f9277595643b1888bbabd78ef9
+      internalID: 1028992992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_5
+      name: PaladinVFXSequence1_5
       rect:
         serializedVersion: 2
         x: 320
@@ -248,14 +260,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de1b7e96e714304e82a74fc0bc82c14
-      internalID: -1537667771
+      spriteID: 410ebd87483f90240a58c596037102c9
+      internalID: 1086061456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_6
+      name: PaladinVFXSequence1_6
       rect:
         serializedVersion: 2
         x: 384
@@ -269,14 +281,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c279a47df0da69f44b2792429c598373
-      internalID: -143356402
+      spriteID: b9b5f678a80995549bacdce05bc6cf9a
+      internalID: -1525449091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_7
+      name: PaladinVFXSequence1_7
       rect:
         serializedVersion: 2
         x: 448
@@ -290,14 +302,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee610d1b695b8b040996160559aa84c9
-      internalID: 1306828613
+      spriteID: 661bfd331d4d1e54bb57ef32b1cc48da
+      internalID: -183912141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_8
+      name: PaladinVFXSequence1_8
       rect:
         serializedVersion: 2
         x: 512
@@ -311,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 088ac53dc9f609d48921ec5df0a172dd
-      internalID: 1684874859
+      spriteID: 0175967ee84ca2145adad7f0d4185ba7
+      internalID: -1760876598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AssassinVFXSequence1_9
+      name: PaladinVFXSequence1_9
       rect:
         serializedVersion: 2
         x: 576
@@ -332,8 +344,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722075b34ea5da143b31fad58ca4aa80
-      internalID: 1513321576
+      spriteID: cfe3f210d4463a744950f7a932e4db28
+      internalID: -544239514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinVFXSequence1_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e752d5871ecd044b2a7197f50f05e1
+      internalID: 156797855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PaladinVFXSequence1_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67396ae37722b384a955f98f235b8772
+      internalID: 588446097
       vertices: []
       indices: 
       edges: []
@@ -349,16 +403,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AssassinVFXSequence1_0: 7745807
-      AssassinVFXSequence1_1: -1860532387
-      AssassinVFXSequence1_2: 129997818
-      AssassinVFXSequence1_3: -590879600
-      AssassinVFXSequence1_4: -39604005
-      AssassinVFXSequence1_5: -1537667771
-      AssassinVFXSequence1_6: -143356402
-      AssassinVFXSequence1_7: 1306828613
-      AssassinVFXSequence1_8: 1684874859
-      AssassinVFXSequence1_9: 1513321576
+      PaladinVFXSequence1_0: -673285368
+      PaladinVFXSequence1_1: -520898313
+      PaladinVFXSequence1_10: 156797855
+      PaladinVFXSequence1_11: 588446097
+      PaladinVFXSequence1_2: -1725492854
+      PaladinVFXSequence1_3: 2115151038
+      PaladinVFXSequence1_4: 1028992992
+      PaladinVFXSequence1_5: 1086061456
+      PaladinVFXSequence1_6: -1525449091
+      PaladinVFXSequence1_7: -183912141
+      PaladinVFXSequence1_8: -1760876598
+      PaladinVFXSequence1_9: -544239514
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
