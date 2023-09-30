@@ -24,6 +24,11 @@ public class CombatManager : MonoBehaviour
 
     bool sync = false;
 
+    //Stop attack button spam
+    public GameObject attackButton;
+    public GameObject retreatButton;
+    private bool isCouroutineRunning; // = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +80,9 @@ public class CombatManager : MonoBehaviour
     //This will need to be refactored hard, damage needs to happen in sync with movements
     IEnumerator DamageCleanup()
     {
+        //fix attack button spam*******************************************************************************************
+        isCouroutineRunning = true;
+
         yield return new WaitForSeconds(2);
         Coroutine[] Movements = new Coroutine[ecount + pcount];
         int cCount = 0;
@@ -267,5 +275,32 @@ public class CombatManager : MonoBehaviour
         }
         yield return StartCoroutine(held.gameObject.GetComponent<moveCoroutine>().FullMotion((held.stats.target.gameObject.transform.position - held.gameObject.transform.position) / 3 + held.gameObject.transform.position, clashTime, Quaternion.Euler(0, 0, held.arrowSprite.transform.rotation.eulerAngles.z + tweak), clashTime,0));
         yield return null;
+    }
+
+    //Fix attack button spam problem
+    public void disableMoreAtacks()
+    {
+        /*
+        if(state == CombatState.SELECTING)
+        {
+           attackButton.SetActive(true);
+        }
+        else if (state == CombatState.DEFAULT)
+        {
+           attackButton.SetActive(false);
+        }
+        */
+
+        /*
+        if (isCouroutineRunning == false)
+        {
+            attackButton.SetActive(true);
+        }
+        else if (isCouroutineRunning == true)
+        {
+            attackButton.SetActive(false);
+        }
+        */
+        
     }
 }
