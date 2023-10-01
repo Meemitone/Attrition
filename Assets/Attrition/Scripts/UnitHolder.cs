@@ -62,7 +62,7 @@ public class UnitHolder : MonoBehaviour
         else
         {
             arrowSprite.GetComponent<HardToMove>().lockedPos = (stats.target.gameObject.transform.position - gameObject.transform.position) / 2 + gameObject.transform.position;
-            arrowSprite.transform.localScale = new Vector3((stats.target.gameObject.transform.position - gameObject.transform.position).magnitude*200/ 4.441839f, arrowSprite.transform.localScale.y);
+            arrowSprite.transform.localScale = new Vector3((stats.target.gameObject.transform.position - gameObject.transform.position).magnitude*.9f, arrowSprite.transform.localScale.y);
             arrowSprite.GetComponent<HardToMove>().lockedRot = Quaternion.FromToRotation(transform.right, (stats.target.gameObject.transform.position - gameObject.transform.position));
         }
     }
