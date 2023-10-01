@@ -14,8 +14,8 @@ public class CombatManager : MonoBehaviour
 
     public GameObject players;
     public GameObject enemies;
-    GameObject source, target;
-    CombatState state;
+    [SerializeField] GameObject source, target;
+    [SerializeField] CombatState state;
     public float baseDamage = 5;
     public int pcount, ecount;
     public float gap;
@@ -56,6 +56,9 @@ public class CombatManager : MonoBehaviour
                 return;//if any player unit has no target stop
             }
         }
+
+        disableMoreAtacks();
+
         //else find targets for the enemies
         held = enemies.GetComponentsInChildren<UnitHolder>();
         for (int i = 0; i < held.Length; i++)
@@ -109,14 +112,14 @@ public class CombatManager : MonoBehaviour
                 Movements[cCount] = StartCoroutine(held[i].gameObject.GetComponent<moveCoroutine>().FullMotion(held[i].stats.target.gameObject.transform.position, oneSidedTime, Quaternion.Euler(0, 0, held[i].arrowSprite.transform.rotation.eulerAngles.z - 90), oneSidedTime, (oneSidedTime*oCount + oneSidedTime*oCount)*2));
                 oneSided[cCount] = true;
                 cCount++;
-                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, oneSidedTime + oneSidedTime + (oneSidedTime * oCount + oneSidedTime * oCount) * 2, false)); //time to rotate + time to bonk (in this case oneSidedTime on both)
+                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, oneSidedTime + oneSidedTime + (oneSidedTime * oCount + oneSidedTime * oCount) * 2, false, (int)held[i].GiveType())); //time to rotate + time to bonk (in this case oneSidedTime on both)
                 oCount++;
             }
             else
             {
                 Movements[cCount] = StartCoroutine(DelayMotion(held[i], -90));
                 cCount++;
-                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, clashTime + clashTime, true)); //time to rotate + time to bonk (in this case clashTime on both) + time for onesided attacks in full
+                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, clashTime + clashTime, true, (int)held[i].GiveType())); //time to rotate + time to bonk (in this case clashTime on both) + time for onesided attacks in full
             }
         }
         held = enemies.GetComponentsInChildren<UnitHolder>();
@@ -133,14 +136,14 @@ public class CombatManager : MonoBehaviour
                 Movements[cCount] = StartCoroutine(held[i].gameObject.GetComponent<moveCoroutine>().FullMotion(held[i].stats.target.gameObject.transform.position, oneSidedTime, Quaternion.Euler(0, 0, held[i].arrowSprite.transform.rotation.eulerAngles.z + 90), oneSidedTime, (oneSidedTime * oCount + oneSidedTime * oCount) * 2));
                 oneSided[cCount] = true;
                 cCount++;
-                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, oneSidedTime + oneSidedTime + (oneSidedTime * oCount + oneSidedTime * oCount) * 2, false)); //time to rotate + time to bonk (in this case oneSidedTime on both)
+                StartCoroutine(DamageAfterTime(damage, held[i].stats.target, oneSidedTime + oneSidedTime + (oneSidedTime * oCount + oneSidedTime * oCount) * 2, false, (int)held[i].GiveType())); //time to rotate + time to bonk (in this case oneSidedTime on both)
                 oCount++;
             }
             else
             {
                 Movements[cCount] = StartCoroutine(DelayMotion(held[i], 90));
                 cCount++;
-                StartCoroutine(DamageAfterTime(damage, held[i].stats.target,clashTime + clashTime, true)); //time to rotate + time to bonk (in this case clashTime on both) + time for onesided attacks in full
+                StartCoroutine(DamageAfterTime(damage, held[i].stats.target,clashTime + clashTime, true, (int)held[i].GiveType())); //time to rotate + time to bonk (in this case clashTime on both) + time for onesided attacks in full
             }
         }
         for (int i = 0; i < cCount; i++)
@@ -264,7 +267,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    IEnumerator DamageAfterTime(float damage, UnitHolder target, float time, bool wait)
+    IEnumerator DamageAfterTime(float damage, UnitHolder target, float time, bool wait, int sourceType)
     {
         while(wait && !sync)
         {
@@ -272,6 +275,7 @@ public class CombatManager : MonoBehaviour
         }
         yield return new WaitForSeconds(time);
         target.stats.CurrentHP -= damage;
+        target.anims[sourceType].SetTrigger("play");
         //Debug.Log("" + target.stats.CurrentHP + "/" + target.stats.MaxHP);
 
         target.UpdateSelf();

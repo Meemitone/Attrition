@@ -7,6 +7,7 @@ public class cameraShake : MonoBehaviour
     public bool startShaking = false;
     public AnimationCurve curve;
     public float duration = 1f;
+    public float magnitude = 20f;
 
     /*
     private void OnCollisionEnter(Collision collision)
@@ -63,7 +64,7 @@ public class cameraShake : MonoBehaviour
           //  yield return new WaitForSeconds(1.5f);
 
             elapsedTime += Time.deltaTime;
-            float strength = curve.Evaluate(elapsedTime / duration);
+            float strength = curve.Evaluate(elapsedTime / duration) * magnitude;
             transform.position = startPosition + Random.insideUnitSphere * strength;
             yield return null;
         }

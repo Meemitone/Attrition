@@ -89,6 +89,15 @@ public class moveCoroutine : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         yield return StartCoroutine(Rotater(targetRot, turnTime));
         yield return StartCoroutine(Mover(targetPos, moveTime));
+
+        cameraShake c = null;
+        if (Camera.main.TryGetComponent<cameraShake>(out c))
+        {
+            c.startShaking = true;
+        }
+        Debug.Assert(c != null); //Throw a error if can't find a cameraShake on camera
+
+
         yield return StartCoroutine(Mover(originalPos, moveTime));
         yield return StartCoroutine(Rotater(originalRotation, turnTime));
     }

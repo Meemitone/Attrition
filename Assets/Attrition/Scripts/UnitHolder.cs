@@ -9,6 +9,8 @@ public class UnitHolder : MonoBehaviour
 {
     [SerializeField] private Sprite[] Sprites;
     [SerializeField] public CombatUnit stats;
+    [SerializeField] public Animator[] anims;
+    [SerializeField] private SpriteRenderer cardImage;
     public TextMeshProUGUI Type;
     public TextMeshProUGUI ATK;
     public TextMeshProUGUI DEF;
@@ -24,7 +26,7 @@ public class UnitHolder : MonoBehaviour
             Randomize();
         }
         UpdateSelf();
-        GetComponent<Image>().sprite = Sprites[(int)GiveType()];
+        cardImage.sprite = Sprites[(int)GiveType()];
     }
 
     // Update is called once per frame
