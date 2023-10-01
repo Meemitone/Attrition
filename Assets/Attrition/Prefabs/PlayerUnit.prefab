@@ -607,9 +607,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.24178235, g: 0.8679245, b: 0.15966538, a: 1}
+    m_PressedColor: {r: 0.14263237, g: 0.6603774, b: 0.08410467, a: 1}
+    m_SelectedColor: {r: 0.4627451, g: 0.43529412, b: 0.43529412, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -653,6 +653,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8513f4c8603363646947d47061e8a473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 5c4d1d6a8bba83a40ac88012cd628212, type: 3}
+  - {fileID: 21300000, guid: 32cbe0f50a29dc44580107fd9f0e0023, type: 3}
+  - {fileID: 21300000, guid: d70deb015a1f8b84fba318cda9b1d23f, type: 3}
   stats:
     Attack: 20
     Defense: 20

@@ -1897,42 +1897,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.19406372
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.19406372
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.8396226
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.080322154
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.080322154
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8962264
-      objectReference: {fileID: 0}
-    - target: {fileID: 3185635331514247060, guid: bfb85dbd8db76514bb65ef42d23817d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2485,42 +2449,6 @@ PrefabInstance:
     - target: {fileID: 6442297734532283645, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
       propertyPath: m_Name
       value: PlayerLeft
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.08410467
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.6603774
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 0.14263237
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.b
-      value: 0.43529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.g
-      value: 0.43529412
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_SelectedColor.r
-      value: 0.4627451
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.15966538
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.8679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.24178235
       objectReference: {fileID: 0}
     - target: {fileID: 6442297734532283647, guid: e3a953247baa15846bcddff1bb40d909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

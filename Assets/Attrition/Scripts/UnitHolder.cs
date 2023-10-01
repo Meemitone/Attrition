@@ -7,6 +7,7 @@ using static GameDataManager;
 
 public class UnitHolder : MonoBehaviour
 {
+    [SerializeField] private Sprite[] Sprites;
     [SerializeField] public CombatUnit stats;
     public TextMeshProUGUI Type;
     public TextMeshProUGUI ATK;
@@ -23,6 +24,7 @@ public class UnitHolder : MonoBehaviour
             Randomize();
         }
         UpdateSelf();
+        GetComponent<Image>().sprite = Sprites[(int)GiveType()];
     }
 
     // Update is called once per frame
